@@ -7,64 +7,188 @@
     tools:context=".Fragments.PublicationListFragment">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:background="@drawable/cover"
-        android:id="@+id/img_cover"
-        >
-
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="16dp"
-            android:background="@drawable/ic_logout_light"
-            />
-
-    </RelativeLayout>
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/temp_pic"
-        android:layout_marginTop="150dp"
-        android:layout_marginStart="16dp"
-        />
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/img_cover"
-        android:gravity="center"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
 
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@drawable/ic_info_light"
-            />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-        <ImageButton
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/ic_info"
-            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:text="Upload"
-            android:textAllCaps="false"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/btn_orange_outline"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="@drawable/cover"
+                        android:id="@+id/img_cover"
+                        >
 
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/ic_logout_light"
+                            />
+
+                    </RelativeLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/temp_pic"
+                        android:layout_marginTop="145dp"
+                        android:layout_marginStart="16dp"
+                        android:id="@+id/img_profile"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:fontFamily="@font/alef"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:paddingTop="4dp"
+                        android:text="John Doe"
+                        android:layout_below="@+id/img_profile"
+                        android:drawableEnd="@drawable/ic_done_circle"
+                        android:drawablePadding="10dp"
+                        android:layout_marginStart="16dp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/img_cover"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="8dp"
+                        >
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_info_light"
+                            />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/ic_info"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Upload"
+                            android:textSize="14sp"
+                            android:textAllCaps="false"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/btn_orange_outline"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/img_profile"
+                        android:layout_marginTop="48dp"
+                        android:paddingHorizontal="16dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$30.43 Earnings"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0 Pay Pending"
+                            android:layout_marginStart="16dp"
+                            android:textSize="12sp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.2M Total Sales"
+                            android:textSize="12sp"
+                            android:layout_marginStart="16dp"
+                            />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/img_profile"
+                        android:layout_marginTop="72dp"
+                        android:paddingHorizontal="16dp"
+                        android:weightSum="3"
+                        >
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:id="@+id/spinner_uploads"
+                            android:layout_weight="1"/>
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_marginStart="8dp"
+                            android:id="@+id/spinner_stats"
+                            android:layout_weight="1"/>
+
+
+                        <Spinner
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:id="@+id/spinner_payout"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_weight="1"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 
@@ -79,5 +203,6 @@
         app:backgroundTint="@color/textColorLight"
         android:id="@+id/fab"
         />
+
 
 </RelativeLayout>
