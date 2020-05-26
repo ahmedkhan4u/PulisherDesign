@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PulisherDesign</string>
+
+    <string name="publisher_description">A feature story does not have to report on something that has just happened. It
+investigates a series of events or development. It gives a more thorough explanation,
+it may give background information, analyzes and gives new perspectives on an issue
+in society. Descriptions of settings and people are often included to create the
+atmosphere the writer is after</string>
+
+    <string name="fancy_string">
+        <p><b>This is Sample text history</b></p>
+        <p> </p>
+        <p><i>A feature story does not have to report on something that has just happened. It
+            investigates a series of events or development. It gives a more thorough explanation,</i></p>
+        <p>  </p>
+        <p>It gives a more thorough explanation,
+            it may give background information, analyzes and gives new perspectives on an issue
+            in society.It gives a more thorough explanation,
+            it may give background information, analyzes and gives new perspectives on an issue
+            in society.It gives a more thorough explanation,
+            it may give background information, analyzes and gives new perspectives on an issue
+            in society.It gives a more thorough explanation,
+            it may give background information, analyzes and gives new perspectives on an issue
+                in society.</p>
+        <p>A feature story does not have to report on something that has just happened. It
+                investigates a series of events or development. It gives a more thorough explanation,
+                it may give background information,</p>
+    </string>
+
+    <string name="temp_requirments">have a running time no longer than 120 minutes. have room tone at the beginning and end and be free of extraneous sounds. measure between -23dB and -18dB RMS and have -3dB peak values and a maximum -60dB noise floor. be a 192kbps or higher MP3, Constant Bit Rate (CBR) at 44.1 kHz.</string>
+
+    <string name="about_us">
+        At Newsbag, we believe everyone deserves to have a website or online store. Innovation and simplicity makes us happy: our goal is to remove any technical or financial barriers that can prevent business owners from making their own website. We\'re excited to help you on your journey!
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

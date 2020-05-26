@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileActivity"
+    android:background="@color/bg_colour_main"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="20dp">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:onClick="BackButtonClick"
+            android:background="@drawable/ic_back"/>
+
+        <ImageButton
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:onClick="EditButtonClick"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_edit"/>
+    </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/iv_profile_pic_settings"
+                            android:src="@drawable/temp_pic"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            app:civ_border_width="4dp"
+                            app:civ_border_color="#fff"/>
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/login_indicator_icon"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="80dp"
+                            />
+                    </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:fontFamily="@font/regular"
+                    android:textSize="20sp"
+                    android:paddingTop="10dp"
+                    android:text="Balance:  $1565.99"
+                    />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:fontFamily="@font/alef"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:paddingTop="10dp"
+                        android:text="John Doe"
+                        />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:elevation="2dp"
+                        android:paddingVertical="14dp"
+                        android:layout_marginHorizontal="40dp"
+                        android:paddingHorizontal="12dp"
+                        android:background="@drawable/bg_white_rectangel">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Publiser Mode"
+                            android:textStyle=""
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:drawablePadding="20dp"
+                            android:drawableStart="@drawable/ic_person"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/bg_profile_menu"
+                        android:orientation="vertical"
+                        android:paddingTop="60dp">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                >
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_edit"
+                                    android:drawablePadding="20dp"
+                                    android:text="Change Business Information"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:textColor="#303B45"
+                                    android:onClick="ChangeBusinessInfoClick"
+                                    />
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_payment"
+                                    android:drawablePadding="20dp"
+                                    android:text="Payout Method Information"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:onClick="PaymentMethodClick"
+                                    android:textColor="#303B45" />
+
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_publish"
+                                    android:drawablePadding="20dp"
+                                    android:text="Upload Publication"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:onClick="UploadPublishClick"
+                                    android:textColor="#303B45" />
+
+
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_faq"
+                                    android:drawablePadding="20dp"
+                                    android:text="FAQ and Contact Support"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:textColor="#303B45"
+                                    android:onClick="FaqClick"
+                                    />
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_terms_cons"
+                                    android:drawablePadding="20dp"
+                                    android:text="Terms And Conditions"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:onClick="TermsAndConsClick"
+                                    android:textAllCaps="false"
+                                    android:textColor="#303B45" />
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_about"
+                                    android:drawablePadding="20dp"
+                                    android:text="About Us"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:onClick="AboutUsClick"
+                                    android:textColor="#303B45" />
+
+                                <Button
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="50dp"
+                                    android:background="@drawable/bg_white_rectangel"
+                                    android:drawableLeft="@drawable/ic_logout"
+                                    android:drawablePadding="20dp"
+                                    android:text="Log Out"
+                                    android:layout_marginTop="8dp"
+                                    android:textAlignment="textStart"
+                                    android:textAllCaps="false"
+                                    android:textColor="#303B45" />
+
+
+
+
+
+
+
+                            </LinearLayout>
+
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+</LinearLayout>
