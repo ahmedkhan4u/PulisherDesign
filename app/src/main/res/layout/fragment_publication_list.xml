@@ -7,6 +7,67 @@
     tools:context=".Fragments.PublicationListFragment">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/cover"
+        android:id="@+id/img_cover"
+        >
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_logout_light"
+            />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/temp_pic"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="16dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/img_cover"
+        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        >
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_info_light"
+            />
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_info"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:text="Upload"
+            android:textAllCaps="false"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_orange_outline"
+
+            />
+
+
+    </LinearLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
