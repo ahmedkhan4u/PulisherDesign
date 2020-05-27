@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.PublicationListFragment">
 
@@ -69,43 +69,6 @@
                         />
 
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_alignParentEnd="true"
-                        android:layout_below="@+id/img_cover"
-                        android:gravity="center"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginTop="8dp"
-                        >
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_info_light"
-                            />
-
-                        <ImageButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:background="@drawable/ic_info"
-                            />
-
-                        <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Upload"
-                            android:textSize="14sp"
-                            android:textAllCaps="false"
-                            android:layout_marginStart="16dp"
-                            android:background="@drawable/btn_orange_outline"
-
-                            />
-
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -113,6 +76,7 @@
                         android:orientation="horizontal"
                         android:layout_below="@+id/img_profile"
                         android:layout_marginTop="48dp"
+                        android:gravity="center"
                         android:paddingHorizontal="16dp"
                         >
 
@@ -143,47 +107,18 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_below="@+id/img_profile"
-                        android:layout_marginTop="72dp"
-                        android:paddingHorizontal="16dp"
-                        android:weightSum="3"
-                        >
-
-                        <Spinner
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            style="@style/Widget.AppCompat.Spinner.Underlined"
-                            android:id="@+id/spinner_uploads"
-                            android:layout_weight="1"/>
-
-                        <Spinner
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            style="@style/Widget.AppCompat.Spinner.Underlined"
-                            android:layout_marginStart="8dp"
-                            android:id="@+id/spinner_stats"
-                            android:layout_weight="1"/>
-
-
-                        <Spinner
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
-                            android:id="@+id/spinner_payout"
-                            style="@style/Widget.AppCompat.Spinner.Underlined"
-                            android:layout_weight="1"/>
-
-
-
-                    </LinearLayout>
 
 
 
                 </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/recycler_view_publications"
+                    android:paddingBottom="100dp"
+                    />
 
 
             </LinearLayout>

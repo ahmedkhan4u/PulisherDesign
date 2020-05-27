@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +15,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.softrasol.ahmed.pulisherdesign.Adapters.PublicationsAdapter;
+import com.softrasol.ahmed.pulisherdesign.Models.PublicationsModel;
 import com.softrasol.ahmed.pulisherdesign.R;
 import com.softrasol.ahmed.pulisherdesign.UploadPublicationActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,12 +29,12 @@ import com.softrasol.ahmed.pulisherdesign.UploadPublicationActivity;
 public class PublicationListFragment extends Fragment {
 
     private FloatingActionButton floatingActionButton;
-    private String []
-            uploads = {"Uploads"},
-            stats = {"Stats"},
-            payouts = {"Payouts"};
 
-    private Spinner mSpinnerUploads, mSpinnerStats, mSpinnerPayouts;
+
+
+    private RecyclerView mRecyclerViewPublications;
+
+    private List<PublicationsModel>list;
 
     public PublicationListFragment() {
         // Required empty public constructor
@@ -43,10 +50,7 @@ public class PublicationListFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_publication_list, container, false);
 
 
-        uploadsSpinner();
-        statsSpinner();
-        payoutsSpinner();
-
+        recyclerViewPublicationsImplementation();
 
         floatingActionButton = mView.findViewById(R.id.fab);
 
@@ -60,35 +64,25 @@ public class PublicationListFragment extends Fragment {
         return mView;
     }
 
-    private void payoutsSpinner() {
+    private void recyclerViewPublicationsImplementation() {
 
-        mSpinnerPayouts = mView.findViewById(R.id.spinner_payout);
+        list = new ArrayList<>();
 
-        ArrayAdapter adapter = new ArrayAdapter(getContext(),
-                android.R.layout.simple_spinner_dropdown_item, payouts);
+        list.add(new PublicationsModel(R.drawable.book_cover));
+        list.add(new PublicationsModel(R.drawable.cover));
+        list.add(new PublicationsModel(R.drawable.book_cover));
+        list.add(new PublicationsModel(R.drawable.cover));
+        list.add(new PublicationsModel(R.drawable.book_cover));
+        list.add(new PublicationsModel(R.drawable.cover));
 
-        mSpinnerPayouts.setAdapter(adapter);
+        mRecyclerViewPublications = mView.findViewById(R.id.recycler_view_publications);
 
+        mRecyclerViewPublications.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+        PublicationsAdapter adapter = new PublicationsAdapter(getContext(), list);
+
+        mRecyclerViewPublications.setAdapter(adapter);
     }
 
-    private void statsSpinner() {
-        mSpinnerStats = mView.findViewById(R.id.spinner_stats);
-
-        ArrayAdapter adapter = new ArrayAdapter(getContext(),
-                android.R.layout.simple_spinner_dropdown_item, stats);
-
-        mSpinnerStats.setAdapter(adapter);
-    }
-
-    private void uploadsSpinner() {
-
-        mSpinnerUploads = mView.findViewById(R.id.spinner_uploads);
-
-        ArrayAdapter adapter = new ArrayAdapter(getContext(),
-                android.R.layout.simple_spinner_dropdown_item, uploads);
-
-        mSpinnerUploads.setAdapter(adapter);
-
-    }
 
 }
