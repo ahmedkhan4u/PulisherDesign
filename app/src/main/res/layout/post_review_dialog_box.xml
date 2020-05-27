@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="20dp"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_cancel_dialog_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:fontFamily="@font/old"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/btn_send_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+
+    <RatingBar
+        android:id="@+id/rating_bar_my_reviews_activity"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="75dp"
+        android:isIndicator="false"
+        android:saveEnabled="true"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:numStars="5"
+        android:progressTint="#000000"
+        android:stepSize="0.1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#B2A1A1A1" />
+
+    <EditText
+        android:id="@+id/et_review_title_review_dialog_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Review Title"
+        android:imeActionLabel="Amount"
+        android:inputType="textAutoComplete"
+        android:layout_marginLeft="36dp"
+        android:background="@android:color/transparent"
+        android:textColor="#000"
+        android:textSize="22sp"
+        android:paddingVertical="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="#B2A1A1A1" />
+
+    <EditText
+        android:id="@+id/et_review_description_review_dialog_box"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        android:hint="Review"
+        android:imeActionLabel="Amount"
+        android:inputType="textAutoComplete"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="36dp"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+</LinearLayout>

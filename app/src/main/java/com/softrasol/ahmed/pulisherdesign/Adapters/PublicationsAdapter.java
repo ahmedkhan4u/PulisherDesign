@@ -1,6 +1,7 @@
 package com.softrasol.ahmed.pulisherdesign.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.softrasol.ahmed.pulisherdesign.Models.PublicationsModel;
 import com.softrasol.ahmed.pulisherdesign.R;
+import com.softrasol.ahmed.pulisherdesign.SingleSelectionPubliserActivity;
 
 import java.util.List;
 
@@ -37,6 +39,13 @@ public class PublicationsAdapter extends RecyclerView.Adapter<PublicationsAdapte
 
         PublicationsModel model = list.get(position);
         holder.mImgBookCover.setImageResource(model.getImgae());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, SingleSelectionPubliserActivity.class));
+            }
+        });
 
     }
 

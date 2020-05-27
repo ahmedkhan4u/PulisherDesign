@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/ly_customer_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="6dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/grey_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_customer_review_blueprint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alef"
+            android:textSize="11sp"
+            android:text="NEWSPAPER REVIEW"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:id="@+id/tv_text_customer_review_blueprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="@string/publisher_description"
+            android:textColor="#000"
+            android:layout_marginTop="2dp"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:weightSum="1">
+
+            <RatingBar
+                android:id="@+id/rating_bar_customer_review_blueprint"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4.2"
+                android:stepSize="0.1" />
+
+            <TextView
+                android:id="@+id/tv_meta_data_customer_review_blueprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="May 30, 2011, Saif Qureshi"
+                android:textColor="#7E7D7D"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="11sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

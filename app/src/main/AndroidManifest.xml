@@ -20,6 +20,7 @@
         <activity android:name=".FaqActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".TermsAndConditionActivity" />
+        <activity android:name=".ReviewsActivity"></activity>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
