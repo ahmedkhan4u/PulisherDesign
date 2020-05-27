@@ -52,6 +52,13 @@ public class EarningsPayoutFragment extends Fragment {
         spinnerYears();
         recyclerViewImplementation();
 
+        mView.findViewById(R.id.btn_back_earnings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
+
 
         return mView;
     }

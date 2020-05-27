@@ -8,11 +8,32 @@
     tools:context=".Fragments.EarningsPayoutFragment">
 
 
-    <ImageButton
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/ic_back"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back"
+            android:id="@+id/btn_back_earnings"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/textColorLight"
+            android:fontFamily="@font/alef"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Earnings"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
 
 
     <RelativeLayout
